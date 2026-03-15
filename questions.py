@@ -51,3 +51,8 @@ while attempts > 0:
             print()
 else:
     print(f"¡Perdiste! La palabra era: {word}")
+print (f"Tu puntuación final es {attempts}")
+if (attempts!= 0):
+   print("Bien jugado.")
+else: 
+    print("¡Toca mejorar! Mejor suerte la próxima.")
