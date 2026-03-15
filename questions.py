@@ -1,3 +1,5 @@
+#ESTE ES MI GRAN PROGRAMA
+
 import random
 words = [
     "python",
