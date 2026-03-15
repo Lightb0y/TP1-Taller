@@ -1,22 +1,33 @@
 #ESTE ES MI GRAN PROGRAMA
 
 import random
-words = [
-    "python",
-    "programa",
-    "variable",
-    "funcion",
-    "bucle",
-    "cadena",
-    "entero",
-    "lista",
-    ]
-word = random.choice(words)
-guessed = []
-attempts = 6
-
+categorias = {
+    "programacion" :["python","programa","variable","funcion","bucle","cadena","entero","lista",],
+    "paises" :[ "argentina","canada","mexico","guatemala","chile","china","uruguay"],
+    "colores" :["rojo","amarillo","azul","verde","blanco","negro","marron","dorado","rosa","celeste"]
+}
+    
 print("¡Bienvenido al Ahorcado!")
 print()
+#le imprimimo las categorias para que el jugador las sepa
+print ("Estas son tus CATEGORIAS DISPONIBLES")
+for cat in categorias.keys():
+    print(f"- {cat}")
+print()
+#validacion para que elija una categoria valida
+categoria_elegida = ""
+while categoria_elegida not in categorias:
+    categoria_elegida= input("Elegí una categoria: ").capitalize()
+    if categoria_elegida not in categorias:
+        print("Esa no es una categoría valida. Intenta de nuevo")
+# ahora si elegimos al azar una palabra de la categoría seleccionada
+word=random.choice(categorias[categoria_elegida])
+guessed=[]
+attempts=6
+
+print("------------Comienza el juego------------")
+
+
 
 while attempts > 0:
     # Mostrar progreso: letras adivinadas y guiones para las que faltan
