@@ -1,4 +1,4 @@
-#ESTE ES MI GRAN PROGRAMA
+
 
 import random
 categorias = {
